@@ -1,0 +1,22 @@
+@import "variables";
+
+.header__inner {
+  display: flex;
+}
+
+.header-inner__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-inner__search {
+  button {
+    color: $color;
+    background: none;
+  }
+  input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $main-font-color;
+  }
+}

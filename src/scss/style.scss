@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import "~normalize.css";
+@import "variables";
+@import "header";
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $main-font;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  background-color: $color;
+  color: $second-font-color;
+  padding: 10px 32px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
