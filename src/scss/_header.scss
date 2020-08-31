@@ -1,22 +1,38 @@
 @import "variables";
 
+header {
+  padding-top: 32px;
+}
+
 .header__inner {
   display: flex;
+  justify-content: space-between;
 }
 
 .header-inner__logo {
   display: flex;
   align-items: center;
+  img {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+  }
 }
 
 .header-inner__search {
+  padding-right: 34px;
   button {
     color: $color;
     background: none;
+    &:hover {
+      background: none;
+    }
   }
   input {
     border: none;
     outline: none;
     border-bottom: 1px solid $main-font-color;
+    width: 320px;
+    padding-bottom: 6px;
   }
 }
