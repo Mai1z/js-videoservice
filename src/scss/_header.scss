@@ -20,7 +20,7 @@ header {
 }
 
 .header-inner__search {
-  padding-right: 34px;
+  //padding-right: 34px;
   button {
     color: $color;
     background: none;
@@ -35,4 +35,19 @@ header {
     width: 320px;
     padding-bottom: 6px;
   }
+}
+
+.header-inner__login {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  button {
+    color: $color;
+    padding: 10px 16px;
+    background: none;
+  }
+}
+
+.header-inner-login__name {
+  min-width: 34px;
 }
