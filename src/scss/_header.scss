@@ -1,5 +1,10 @@
 @import "variables";
 
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
 header {
   padding-top: 32px;
 }
@@ -10,8 +15,9 @@ header {
 }
 
 .header-inner__logo {
-  display: flex;
-  align-items: center;
+  @extend %flex-center;
+  width: 100%;
+  max-width: 380px;
   img {
     width: 36px;
     height: 36px;
@@ -20,34 +26,104 @@ header {
 }
 
 .header-inner__search {
-  //padding-right: 34px;
+  @extend %flex-center;
+  width: 100%;
+  max-width: 402px;
   button {
-    color: $color;
-    background: none;
-    &:hover {
-      background: none;
-    }
+    padding: 0;
   }
   input {
     border: none;
     outline: none;
     border-bottom: 1px solid $main-font-color;
-    width: 320px;
-    padding-bottom: 6px;
+    width: 100%;
+    max-width: 320px;
+    min-width: 250px;
+    padding: 10px 0 6px 0;
+    margin-right: 32px;
   }
 }
 
 .header-inner__login {
-  display: flex;
-  align-items: center;
+  @extend %flex-center;
+  justify-content: flex-end;
   font-weight: 500;
+  width: 100%;
+  max-width: 380px;
   button {
-    color: $color;
-    padding: 10px 16px;
-    background: none;
+    padding: 0 0 0 16px;
   }
 }
 
 .header-inner-login__name {
   min-width: 34px;
+}
+
+.header-inner__burger {
+  display: none;
+  label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 25px;
+    height: 4px;
+    background-color: $main-font-color;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: -8px;
+      content: ' ';
+      display: block;
+      width: 25px;
+      height: 4px;
+      background-color: $main-font-color;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      content: ' ';
+      display: block;
+      width: 25px;
+      height: 4px;
+      background-color: $main-font-color;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+  }
+
+  input {
+    opacity: 0;
+    appearance: none;
+  }
+  input:checked + label {
+    background-color: transparent;
+    &:before {
+      transform: rotate(45deg);
+      top: 0;
+      transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    }
+    &:after {
+      transform: rotate(-45deg);
+      top: 0;
+      transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 890px) {
+  .header-inner__search {
+    display: none;
+  }
+  .header-inner__login {
+    display: none;
+  }
+  .header-inner__burger {
+    display: block;
+  }
 }

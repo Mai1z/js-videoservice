@@ -28,9 +28,16 @@ footer {
 
 .footer-inner-text__contacts {
   p {
-    font-size: 16px;
     &:first-child {
       margin-bottom: 6px;
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .footer-inner__text {
+    a {
+      font-size: 14px;
     }
   }
 }

@@ -4,6 +4,7 @@
 @import "header";
 @import "nav";
 @import "films";
+@import "channels";
 @import "footer";
 
 :root {
@@ -35,9 +36,10 @@ body {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1210px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 button {
@@ -56,6 +58,13 @@ button {
   }
   &:hover {
     background-color: $hover-color;
+  }
+  &.btn-clear {
+    background: none;
+    color: $color;
+    &:hover {
+      background: none;
+    }
   }
 }
 
@@ -78,4 +87,19 @@ h2 {
 h3 {
   font-size: 20px;
   font-weight: 500;
+}
+
+@media (max-width: 1020px) {
+  p {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
 }
