@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="header">
         <div class="container">
             <div class="header__inner">
                 <div class="header-inner__logo">
@@ -25,52 +25,51 @@
                     <button class="btn-clear">Выйти</button>
                 </div>
                 <div class="header-inner__burger">
-                    <input id="burger" type="checkbox" class="header__burger-input"/>
-                    <label for="burger"></label>
+                    <span></span>
                 </div>
             </div>
         </div>
     </header>
 
-    <nav>
+    <nav id="navigation">
         <div class="container">
-            <div class="nav__inner">
-                <h1><a href="" class="active">Фильмы</a></h1>
-                <h1><a href="">Телеканалы</a></h1>
-            </div>
+            <ul>
+                <li><a href="" class="nav__tab active" data-name="films">Фильмы</a></li>
+                <li><a href="" class="nav__tab" data-name="channels">Телеканалы</a></li>
+            </ul>
         </div>
     </nav>
 
     <main>
         <div class="container">
 
-            <section class="films" >
-                <h2><img src="./assets/img/fire.png" alt="fire">Новинки</h2>
+            <section class="films" id="films">
+                <h2>Новинки</h2>
                 <div class="films__items">
                     <div class="films-items__item">
                         <div class="films-items-item__img">
-                            <img src="./assets/img/image.png" alt="img">
+                            <img src="assets/img/films/image.png" alt="img">
                             <p>Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
                         </div>
                         <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
                     </div>
                     <div class="films-items__item">
                         <div class="films-items-item__img">
-                            <img src="./assets/img/image2.png" alt="img">
+                            <img src="assets/img/films/image2.png" alt="img">
                             <p>Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
                         </div>
                         <p>Новый Бэтмен</p>
                     </div>
                     <div class="films-items__item">
                         <div class="films-items-item__img">
-                            <img src="./assets/img/image4.png" alt="img">
+                            <img src="assets/img/films/image4.png" alt="img">
                             <p>Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
                         </div>
                         <p>Однажды... в Голливуде</p>
                     </div>
                     <div class="films-items__item">
                         <div class="films-items-item__img">
-                            <img src="./assets/img/image3.png" alt="img">
+                            <img src="assets/img/films/image3.png" alt="img">
                             <p>Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
                         </div>
                         <p>Стриптизёрши</p>
@@ -80,27 +79,178 @@
                 <h2>Жанры</h2>
                 <div class="films__items">
                     <div class="films-items__item genre orange">
-                        <img src="./assets/img/smile1.png" alt="img">
+                        <img src="assets/img/films/smile1.png" alt="img">
                         <p>Комедии</p>
                     </div>
                     <div class="films-items__item genre red">
-                        <img src="./assets/img/smile2.png" alt="img">
+                        <img src="assets/img/films/smile2.png" alt="img">
                         <p>Драмы</p>
                     </div>
                     <div class="films-items__item genre blue">
-                        <img src="./assets/img/smile3.png" alt="img">
+                        <img src="assets/img/films/smile3.png" alt="img">
                         <p>Фантастика</p>
                     </div>
                     <div class="films-items__item genre black">
-                        <img src="./assets/img/smile4.png" alt="img">
+                        <img src="assets/img/films/smile4.png" alt="img">
                         <p>Ужасы</p>
                     </div>
                 </div>
             </section>
 
-            <section class="channels">
+            <section class="channels hide" id="channels">
                 <div class="channels__items">
-                    <div class="channels-items__item"></div>
+                    <div class="channels-items__item">
+                        <div class="channels-items-item__logo">
+                            <img src="assets/img/channels/chan1.png" alt="channel">
+                        </div>
+                        <div class="channels-items-item__text">
+                            <h3>Первый канал</h3>
+                            <ul>
+                                <li class="channels-items-item-text__info active">
+                                    <p>13:00</p>
+                                    <p>Новости с субтитрами</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>14:00</p>
+                                    <p>Давай поженимся</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>15:00</p>
+                                    <p>Другие новости</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="channels-items__item">
+                        <div class="channels-items-item__logo">
+                            <img src="assets/img/channels/chan2.png" alt="channel">
+                        </div>
+                        <div class="channels-items-item__text">
+                            <h3>Первый канал</h3>
+                            <ul>
+                                <li class="channels-items-item-text__info active">
+                                    <p>13:00</p>
+                                    <p>Новости с субтитрами</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>14:00</p>
+                                    <p>Давай поженимся</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>15:00</p>
+                                    <p>Другие новости</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="channels-items__item">
+                        <div class="channels-items-item__logo">
+                            <img src="assets/img/channels/chan3.png" alt="channel">
+                        </div>
+                        <div class="channels-items-item__text">
+                            <h3>Первый канал</h3>
+                            <ul>
+                                <li class="channels-items-item-text__info active">
+                                    <p>13:00</p>
+                                    <p>Новости с субтитрами</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>14:00</p>
+                                    <p>Давай поженимся</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>15:00</p>
+                                    <p>Другие новости</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="channels-items__item">
+                        <div class="channels-items-item__logo">
+                            <img src="assets/img/channels/chan4.png" alt="channel">
+                        </div>
+                        <div class="channels-items-item__text">
+                            <h3>Первый канал</h3>
+                            <div class="channels-items-item-text__info active">
+                                <p>13:00</p>
+                                <p>Новости с субтитрами</p>
+                            </div>
+                            <div class="channels-items-item-text__info">
+                                <p>14:00</p>
+                                <p>Давай поженимся</p>
+                            </div>
+                            <div class="channels-items-item-text__info">
+                                <p>15:00</p>
+                                <p>Другие новости</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="channels-items__item">
+                        <div class="channels-items-item__logo">
+                            <img src="assets/img/channels/chan1.png" alt="channel">
+                        </div>
+                        <div class="channels-items-item__text">
+                            <h3>Первый канал</h3>
+                            <ul>
+                                <li class="channels-items-item-text__info active">
+                                    <p>13:00</p>
+                                    <p>Новости с субтитрами</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>14:00</p>
+                                    <p>Давай поженимся</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>15:00</p>
+                                    <p>Другие новости</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="channels-items__item">
+                        <div class="channels-items-item__logo">
+                            <img src="assets/img/channels/chan1.png" alt="channel">
+                        </div>
+                        <div class="channels-items-item__text">
+                            <h3>Первый канал</h3>
+                            <ul>
+                                <li class="channels-items-item-text__info active">
+                                    <p>13:00</p>
+                                    <p>Новости с субтитрами</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>14:00</p>
+                                    <p>Давай поженимся</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>15:00</p>
+                                    <p>Другие новости</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="channels-items__item">
+                        <div class="channels-items-item__logo">
+                            <img src="assets/img/channels/chan1.png" alt="channel">
+                        </div>
+                        <div class="channels-items-item__text">
+                            <h3>Первый канал</h3>
+                            <ul>
+                                <li class="channels-items-item-text__info active">
+                                    <p>13:00</p>
+                                    <p>Новости с субтитрами</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>14:00</p>
+                                    <p>Давай поженимся</p>
+                                </li>
+                                <li class="channels-items-item-text__info">
+                                    <p>15:00</p>
+                                    <p>Другие новости</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

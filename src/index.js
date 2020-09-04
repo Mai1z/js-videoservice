@@ -1,10 +1,15 @@
-import {config} from './modules/config'
-import AppService from './modules/app.service'
-import './modules/header'
-import './css/style.css'
 import './scss/style.scss'
+import {NavigationComponent} from './components/navigation.component'
+import {FilmsComponent} from './components/films.component'
+import {ChannelsComponent} from './components/channels.component'
+import {HeaderComponent} from './components/header.component'
 
-console.log(config.key)
+const header = new HeaderComponent('header')
+const navigation = new NavigationComponent('navigation')
+const films = new FilmsComponent('films')
+const channels = new ChannelsComponent('channels')
 
-const service = new AppService('Hello world')
-service.log()
+navigation.registerTabs([
+    {name: 'films', component: films},
+    {name: 'channels', component: channels}
+])

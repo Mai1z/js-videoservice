@@ -15,17 +15,25 @@
   padding-bottom: 40px;
   h2 {
     margin-bottom: 16px;
-    img {
-      margin-bottom: -1px;
-      margin-right: 4px;
+    &:first-child {
+      position: relative;
+      padding-left: 30px;
+      &:before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-image: url(../assets/img/films/fire.png);
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+      }
     }
   }
 }
 
 .films__items {
   display: flex;
-  //justify-content: space-between;
-  //flex-wrap: wrap;
   margin: 0 -10px 12px -10px;
 }
 
@@ -104,6 +112,7 @@
     background: $main-font-color;
     border-radius: 8px;
     opacity: 0;
+    height: 99%;
   }
   img {
     width: 100%;

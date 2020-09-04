@@ -4,17 +4,28 @@ nav {
   margin-top: 44px;
   margin-bottom: 32px;
   padding-bottom: 7px;
+  ul {
+    display: flex;
+    justify-content: center;
+    a {
+      font-size: 28px;
+      font-weight: 500;
+      margin: 0 12.5px;
+      padding-bottom: 7px;
+      &.active {
+        color: $color;
+        border-bottom: 2px solid $color;
+      }
+    }
+  }
 }
 
-.nav__inner {
-  display: flex;
-  justify-content: center;
-  a {
-    margin: 0 12.5px;
-    padding-bottom: 7px;
-    &.active {
-      color: $color;
-      border-bottom: 2px solid $color;
+@media (max-width: 890px) {
+  nav {
+    ul {
+      a {
+        font-size: 26px;
+      }
     }
   }
 }
