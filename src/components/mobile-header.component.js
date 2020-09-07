@@ -1,6 +1,6 @@
 import {Component} from '../core/component';
 
-export class HeaderComponent extends Component {
+export class MobileHeaderComponent extends Component {
     constructor(id) {
         super(id);
     }
@@ -17,9 +17,9 @@ function buttonHandler(event) {
 
     if (classList.contains('open')) {
         classList.remove('open')
-        this.close()
+        this.hide()
     } else {
         classList.add('open')
-        this.open()
+        this.show()
     }
 }

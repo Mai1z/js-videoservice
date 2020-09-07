@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header id="header">
+    <header id="header" class="hide">
         <div class="container">
             <div class="header__inner">
                 <div class="header-inner__logo">
@@ -21,7 +21,7 @@
                     <button class="btn-clear" type="submit">Найти</button>
                 </form>
                 <div class="header-inner__login">
-                    <div class="header-inner-login__name">Иванов Сергей</div>
+                    <input id="login-name" value="Иванов Сергей" />
                     <button class="btn-clear">Выйти</button>
                 </div>
                 <div class="header-inner__burger">
@@ -98,7 +98,7 @@
             </section>
 
             <section class="channels hide" id="channels">
-                <div class="channels__items">
+                <div class="channels__items" id="scrollbar">
                     <div class="channels-items__item">
                         <div class="channels-items-item__logo">
                             <img src="assets/img/channels/chan1.png" alt="channel">
