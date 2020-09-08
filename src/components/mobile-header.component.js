@@ -1,4 +1,4 @@
-import {Component} from '../core/component';
+import {Component} from '../core/component'
 
 export class MobileHeaderComponent extends Component {
     constructor(id) {
@@ -7,19 +7,19 @@ export class MobileHeaderComponent extends Component {
 
     init() {
         const btn = this.$el.querySelector('.header-inner__burger')
-        btn.addEventListener('click', buttonHandler.bind(this))
+        btn.addEventListener('click', this.buttonHandler.bind(this))
+    }
+
+    buttonHandler(event) {
+        const classList = event.target.classList
+
+        if (classList.contains('open')) {
+            classList.remove('open')
+            this.hide()
+        } else {
+            classList.add('open')
+            this.show()
+        }
     }
 }
 
-function buttonHandler(event) {
-
-    const classList = event.target.classList
-
-    if (classList.contains('open')) {
-        classList.remove('open')
-        this.hide()
-    } else {
-        classList.add('open')
-        this.show()
-    }
-}
