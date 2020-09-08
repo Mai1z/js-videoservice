@@ -17,7 +17,6 @@ export class ChannelsComponent extends Component {
     scrollbarHandler() {
         const scrollContainer = document.querySelector('.channels'),
             scrollContent = document.querySelector('.channels__items')
-
         let contentPosition = 0,
             scrollerBeingDragged = false,
             scroller,
@@ -44,10 +43,12 @@ export class ChannelsComponent extends Component {
             normalizedPosition = event.pageY;
             contentPosition = scrollContent.scrollTop;
             scrollerBeingDragged = true;
+            scrollContainer.setAttribute('onmousedown',"return false")
         }
 
         const stopDrag = (event) => {
             scrollerBeingDragged = false;
+            scrollContainer.removeAttribute('onmousedown')
         }
 
         const scrollBarScroll = (event) => {
@@ -65,6 +66,7 @@ export class ChannelsComponent extends Component {
 
             if (scrollerHeight / scrollContainer.offsetHeight < 1){
                 scroller.style.height = scrollerHeight + 'px'
+                scrollContent.classList.add('scrolled')
                 scrollContainer.appendChild(scroller)
                 scrollContainer.className += ' showScroll'
 
