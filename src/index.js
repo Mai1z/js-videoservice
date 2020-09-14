@@ -4,9 +4,11 @@ import {FilmsComponent} from './components/films.component'
 import {ChannelsComponent} from './components/channels.component'
 import {MobileHeaderComponent} from './components/mobile-header.component'
 import {LoginNameComponent} from './components/login-name.component'
+import {ModalComponent} from './components/modal.component'
 
 new MobileHeaderComponent('header')
 new LoginNameComponent('login-name')
+new ModalComponent('login-modal')
 const navigation = new NavigationComponent('navigation')
 const films = new FilmsComponent('films')
 const channels = new ChannelsComponent('channels')

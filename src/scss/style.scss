@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 @import "~normalize.css";
 @import "variables";
-@import "header";
-@import "nav";
-@import "films";
-@import "channels";
-@import "footer";
 
 :root {
   box-sizing: border-box;
@@ -18,14 +13,12 @@
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,p {
   padding: 0;
   margin: 0;
 }
 
 p {
-  padding: 0;
-  margin: 0;
   font-weight: normal;
   font-size: 16px;
   color: $main-font-color;
@@ -94,6 +87,22 @@ ul {
   display: none;
 }
 
+.fixed {
+  overflow: hidden;
+}
+
+input {
+  border-radius: 0;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $main-font-color;
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 0 6px 0;
+  margin-right: 32px;
+}
+
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
@@ -104,6 +113,24 @@ input::-ms-clear {
   display: none!important;
   width : 0;
   height: 0;
+}
+
+input::-webkit-input-placeholder {
+  color: $input-placeholder;
+  font-weight: normal;
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  color: $input-placeholder;
+  opacity: 1;
+  font-weight: normal;
+}
+
+input:-ms-input-placeholder {
+  color: $input-placeholder;
+  opacity: 1;
+  font-weight: normal!important;
 }
 
 @media (max-width: 1020px) {
@@ -117,3 +144,10 @@ input::-ms-clear {
     font-size: 18px;
   }
 }
+
+@import "header";
+@import "header-modal";
+@import "nav";
+@import "films";
+@import "channels";
+@import "footer";

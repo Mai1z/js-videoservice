@@ -46,7 +46,7 @@ export class ChannelsComponent extends Component {
             scrollContainer.setAttribute('onmousedown',"return false")
         }
 
-        const stopDrag = (event) => {
+        const stopDrag = () => {
             scrollerBeingDragged = false;
             scrollContainer.removeAttribute('onmousedown')
         }
